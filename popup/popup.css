@@ -1,0 +1,110 @@
+/* General body styles */
+body {
+  font-family: 'Fira Code', monospace; /* Set Fira Code as the main font */
+  font-weight: bold; /* Make font bold */
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #1c1c1c; /* Light background color */
+  width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #9e72c3;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #9e72c3;
+}
+
+/* Timer Section */
+#timer {
+  margin-bottom: 30px;
+  color: whitesmoke;
+}
+
+#time-input {
+  padding-top:5px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 60px;
+  background-color: #1c1c1c;
+  border: none;
+  text-align: center;
+  color: whitesmoke;
+
+}
+
+#start-timer {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #924dbf; /* Green background */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-timer:hover {
+  transform: scale(1.05);
+  background-color: #0056b3; /* Darker green on hover */
+}
+
+
+
+/* Countdown Display */
+#countdown-display {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #9e72c3;
+}
+
+/* Subject Grid Layout */
+#subject-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns across */
+  gap: 20px; /* Space between buttons */
+  max-width: 800px; /* Prevent too wide of a grid */
+  margin: 0 auto; /* Center grid */
+}
+
+.subject {
+  padding: 15px;
+  font-size: 18px;
+  background-color: #7338a0; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 12px; /* Beveled corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+}
+
+.subject:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly grow on hover */
+}
+
+.subject:active {
+  background-color: #004494; /* Even darker blue on click */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #subject-selection {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #subject-selection {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
